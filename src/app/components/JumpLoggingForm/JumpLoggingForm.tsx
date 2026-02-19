@@ -1,35 +1,19 @@
+import { formFields } from "@/app/data/form-fields";
+import FormField from "../FormField/FormField";
+
 const JumpLogginForm = () => {
   return (
     <form className="flex flex-row justify-between">
-      <label htmlFor="dropzone">Dropzone</label>
-      <br></br>
-      <input
-        type="text"
-        id="dropzone"
-        name="dropzone"
-        required
-        className="border-4 border-indigo-500"
-      />
-      <br></br>
-      <label htmlFor="date">Date</label>
-      <br></br>
-      <input
-        type="date"
-        id="date"
-        name="date"
-        required
-        className="border-4 border-indigo-500"
-      />
-      <br></br>
-      <label htmlFor="notes">Notes</label>
-      <br></br>
-      <input
-        type="textarea"
-        id="notes"
-        name="notes"
-        required
-        className="border-4 border-indigo-500"
-      />
+      {formFields.map((fieldConfig) => (
+        <FormField
+          key={fieldConfig.name}
+          type={fieldConfig.type}
+          name={fieldConfig.name}
+          label={fieldConfig.label}
+          required={fieldConfig.required}
+          className="border-4 border-indigo-500"
+        />
+      ))}
     </form>
   );
 };
