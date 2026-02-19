@@ -1,6 +1,6 @@
 const JumpLogginForm = () => {
   return (
-    <form>
+    <form className="flex flex-row justify-between">
       <label htmlFor="dropzone">Dropzone</label>
       <br></br>
       <input
