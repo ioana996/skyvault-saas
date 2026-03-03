@@ -1,10 +1,10 @@
-import JumpLogginForm from "./components/JumpLoggingForm/JumpLoggingForm";
+import CreateJumpLoggingForm from "./components/CreateJumpLoggingForm/CreateJumpLoggingForm";
 
 export default function Home() {
   return (
     <div>
       <main>
-        <JumpLogginForm />
+        <CreateJumpLoggingForm />
       </main>
     </div>
   );
