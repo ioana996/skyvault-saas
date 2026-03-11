@@ -4,6 +4,10 @@ export interface FormFieldProps {
   label: string;
   required?: boolean;
   className?: string;
+  value: string;
+  onChange: (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => void;
 }
 const FormField = ({
   type,
@@ -11,6 +15,8 @@ const FormField = ({
   label,
   required = false,
   className = "",
+  value,
+  onChange,
 }: FormFieldProps) => {
   return (
     <>
@@ -22,6 +28,8 @@ const FormField = ({
         name={name}
         required={required}
         className={className}
+        value={value}
+        onChange={onChange}
       />
     </>
   );
