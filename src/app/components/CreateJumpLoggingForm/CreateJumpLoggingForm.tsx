@@ -14,7 +14,7 @@ const CreateJumpLoggingForm = () => {
   };
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Submiting form...");
+    console.log("Submitting form...");
   };
 
   return (

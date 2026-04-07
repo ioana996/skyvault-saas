@@ -6,18 +6,31 @@ interface ProgressStatCardProps {
   progress: number;
 }
 
-const ProgressStatCard = ({ title, label, current, required, progress }: ProgressStatCardProps) => {
+const ProgressStatCard = ({
+  title,
+  label,
+  current,
+  required,
+  progress,
+}: ProgressStatCardProps) => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm min-w-[180px]">
-      <div className="text-3xl font-bold text-indigo-600">{title}</div>
-      <div className="text-sm text-gray-600 mt-1">{label}</div>
-      <div className="mt-3 w-full bg-gray-100 rounded-full h-2">
+    <div className="bg-sky-surface border border-sky-border p-6 rounded-xl min-w-[180px]">
+      <div className="text-3xl font-bold text-sky-primary">{title}</div>
+      <div className="text-sm text-sky-text-muted mt-1">{label}</div>
+      <div
+        className="mt-3 w-full bg-sky-surface-mid rounded-full h-2"
+        role="progressbar"
+        aria-valuenow={progress}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-label={`${title} progress: ${progress}%`}
+      >
         <div
-          className="bg-indigo-500 h-2 rounded-full transition-all"
+          className="bg-sky-primary h-2 rounded-full transition-all"
           style={{ width: `${progress}%` }}
         />
       </div>
-      <div className="text-xs text-gray-400 mt-1">
+      <div className="text-xs text-sky-text-subtle mt-1">
         {current} / {required} jumps ({progress}%)
       </div>
     </div>
