@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
+/* ─── Sky Design Tokens ──────────────────────────────────────── */
 :root {
-  --background: #f4f4f5;
-  --foreground: #18181b;
+  /* Dark theme (default) */
+  --sky-bg:           #0F172A;
+  --sky-surface:      #1E293B;
+  --sky-surface-mid:  #334155;
+  --sky-surface-high: #475569;
+  --sky-text:         #F8FAFC;
+  --sky-text-muted:   #94A3B8;
+  --sky-text-subtle:  #64748B;
+  --sky-primary:      #3B82F6;
+  --sky-accent:       #F97316;
+  --sky-success:      #10B981;
+  --sky-border:       rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="light"] {
+  --sky-bg:           #F1F5F9;
+  --sky-surface:      #FFFFFF;
+  --sky-surface-mid:  #E2E8F0;
+  --sky-surface-high: #CBD5E1;
+  --sky-text:         #0F172A;
+  --sky-text-muted:   #475569;
+  --sky-text-subtle:  #94A3B8;
+  --sky-primary:      #3B82F6;
+  --sky-accent:       #F97316;
+  --sky-success:      #10B981;
+  --sky-border:       rgba(0, 0, 0, 0.08);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-sky-bg:           var(--sky-bg);
+  --color-sky-surface:      var(--sky-surface);
+  --color-sky-surface-mid:  var(--sky-surface-mid);
+  --color-sky-surface-high: var(--sky-surface-high);
+  --color-sky-text:         var(--sky-text);
+  --color-sky-text-muted:   var(--sky-text-muted);
+  --color-sky-text-subtle:  var(--sky-text-subtle);
+  --color-sky-primary:      var(--sky-primary);
+  --color-sky-accent:       var(--sky-accent);
+  --color-sky-success:      var(--sky-success);
+  --color-sky-border:       var(--sky-border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0f0f11;
-    --foreground: #e4e4e7;
-  }
+/* ─── Base styles ─────────────────────────────────────────────── */
+body {
+  background-color: var(--sky-bg);
+  color: var(--sky-text);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ─── Motion preferences ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
