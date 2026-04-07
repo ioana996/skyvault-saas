@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
-/* ─── Sky Design Tokens ──────────────────────────────────────── */
+/* Dark theme: active when no data-theme attribute is set */
 :root {
-  /* Dark theme (default) */
   --sky-bg:           #0F172A;
   --sky-surface:      #1E293B;
   --sky-surface-mid:  #334155;
@@ -46,14 +45,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* ─── Base styles ─────────────────────────────────────────────── */
 body {
   background-color: var(--sky-bg);
   color: var(--sky-text);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
-/* ─── Motion preferences ──────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

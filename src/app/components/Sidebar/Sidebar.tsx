@@ -24,12 +24,10 @@ const Sidebar = () => {
       className="hidden lg:flex flex-col w-[220px] min-h-screen bg-sky-surface border-r border-sky-border px-4 py-6"
       aria-label="Sidebar navigation"
     >
-      {/* Brand */}
       <div className="flex items-center gap-2 mb-8 px-2">
         <span className="text-xl font-bold text-sky-text">SkyVault</span>
       </div>
 
-      {/* Nav */}
       <nav aria-label="Sidebar" className="flex-1 space-y-1">
         {navItems.map(({ label, icon: Icon, active }) =>
           active ? (
@@ -54,7 +52,6 @@ const Sidebar = () => {
         )}
       </nav>
 
-      {/* Bottom: ThemeToggle + Profile */}
       <div className="mt-auto space-y-4 pt-4 border-t border-sky-border">
         <div className="flex items-center justify-between px-2">
           <span className="text-xs text-sky-text-subtle">Theme</span>

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "Your personal skydiving logbook",
 };
 
-// Inline script: runs before first paint to set data-theme and prevent FOUC
+// Prevents flash of wrong theme on page load
 const themeScript = `
 (function() {
   try {

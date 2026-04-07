@@ -13,7 +13,6 @@ const BottomNav = ({ onFabClick }: BottomNavProps) => {
       aria-label="Main navigation"
     >
       <div className="flex items-center justify-around px-2 pb-safe">
-        {/* Home (active) */}
         <button
           className="flex flex-col items-center gap-0.5 py-2 px-3 text-sky-primary min-w-[44px] min-h-[44px] justify-center"
           aria-current="page"
@@ -22,7 +21,6 @@ const BottomNav = ({ onFabClick }: BottomNavProps) => {
           <span className="text-[10px] font-medium">Home</span>
         </button>
 
-        {/* Logbook (placeholder) */}
         <button
           className="flex flex-col items-center gap-0.5 py-2 px-3 text-sky-text-subtle min-w-[44px] min-h-[44px] justify-center cursor-default"
           disabled
@@ -32,7 +30,6 @@ const BottomNav = ({ onFabClick }: BottomNavProps) => {
           <span className="text-[10px]">Logbook</span>
         </button>
 
-        {/* FAB */}
         <button
           onClick={onFabClick}
           aria-label="Log Jump"
@@ -41,7 +38,6 @@ const BottomNav = ({ onFabClick }: BottomNavProps) => {
           <PlusCircle size={24} aria-hidden="true" />
         </button>
 
-        {/* Stats (placeholder) */}
         <button
           className="flex flex-col items-center gap-0.5 py-2 px-3 text-sky-text-subtle min-w-[44px] min-h-[44px] justify-center cursor-default"
           disabled
@@ -51,7 +47,6 @@ const BottomNav = ({ onFabClick }: BottomNavProps) => {
           <span className="text-[10px]">Stats</span>
         </button>
 
-        {/* Profile (placeholder) */}
         <button
           className="flex flex-col items-center gap-0.5 py-2 px-3 text-sky-text-subtle min-w-[44px] min-h-[44px] justify-center cursor-default"
           disabled

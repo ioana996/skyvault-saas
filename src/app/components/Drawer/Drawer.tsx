@@ -21,7 +21,6 @@ const Drawer = ({ isOpen, onClose, children }: DrawerProps) => {
 
   return (
     <>
-      {/* Backdrop */}
       <div
         data-testid="drawer-backdrop"
         onClick={onClose}
@@ -33,7 +32,6 @@ const Drawer = ({ isOpen, onClose, children }: DrawerProps) => {
         `}
       />
 
-      {/* Drawer panel */}
       <div
         role="dialog"
         aria-modal="true"
@@ -47,7 +45,6 @@ const Drawer = ({ isOpen, onClose, children }: DrawerProps) => {
           max-h-[90vh] overflow-y-auto
         `}
       >
-        {/* Handle */}
         <div className="flex justify-center pt-3 pb-1">
           <div
             data-testid="drawer-handle"
@@ -55,7 +52,6 @@ const Drawer = ({ isOpen, onClose, children }: DrawerProps) => {
           />
         </div>
 
-        {/* Content */}
         <div className="px-4 pb-8 pt-2">{children}</div>
       </div>
     </>

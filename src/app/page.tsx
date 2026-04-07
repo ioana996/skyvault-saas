@@ -14,24 +14,19 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-sky-bg flex">
-      {/* Desktop sidebar (hidden on mobile) */}
       <Sidebar />
 
-      {/* Main content */}
       <div className="flex-1 flex flex-col min-h-screen">
-        {/* Mobile top bar */}
         <header className="lg:hidden flex items-center justify-between px-4 py-3 border-b border-sky-border">
           <span className="text-lg font-bold text-sky-text">SkyVault</span>
           <ThemeToggle />
         </header>
 
-        {/* Page content */}
         <main className="flex-1 flex flex-col lg:flex-row gap-6 p-4 lg:p-8 pb-24 lg:pb-8">
-          {/* Left column — stats */}
           <div className="flex-1 max-w-2xl mx-auto w-full lg:mx-0">
             <HeroStats />
 
-            {/* Recent jumps placeholder (desktop left col) */}
+            {/* TODO: Replace with jump history */}
             <section
               className="hidden lg:block mt-6 bg-sky-surface border border-sky-border rounded-xl p-6"
               aria-label="Recent jumps"
@@ -43,7 +38,6 @@ export default function Home() {
             </section>
           </div>
 
-          {/* Right column — desktop persistent form */}
           <aside className="hidden lg:block w-[360px] shrink-0">
             <div className="bg-sky-surface border border-sky-border rounded-xl p-6 sticky top-8">
               <h2 className="text-sky-text font-semibold mb-4 flex items-center gap-2">
@@ -56,10 +50,8 @@ export default function Home() {
         </main>
       </div>
 
-      {/* Mobile bottom nav (hidden on desktop) */}
       <BottomNav onFabClick={() => setDrawerOpen(true)} />
 
-      {/* Mobile drawer form */}
       <Drawer isOpen={drawerOpen} onClose={() => setDrawerOpen(false)}>
         <h2 className="text-sky-text font-semibold mb-4">Log Jump</h2>
         <CreateJumpLoggingForm />

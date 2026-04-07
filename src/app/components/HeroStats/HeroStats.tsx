@@ -21,7 +21,6 @@ const HeroStats = () => {
 
   return (
     <section className="w-full space-y-6 mb-8" aria-label="Jump statistics">
-      {/* Hero number */}
       <div className="text-center">
         <div className="text-[72px] font-bold leading-none text-sky-text">
           {totalJumps}
@@ -31,7 +30,6 @@ const HeroStats = () => {
         </div>
       </div>
 
-      {/* Secondary stats grid */}
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
         <StatCard value={freefallTimeFormatted} label="Total Freefall" />
         <StatCard value={daysSinceLastJump} label="Days Since Jump" />
@@ -43,7 +41,6 @@ const HeroStats = () => {
         </div>
       </div>
 
-      {/* License progress bar */}
       <ProgressStatCard
         title={nextLicense.name}
         label="Next License Goal"
@@ -52,7 +49,6 @@ const HeroStats = () => {
         progress={licenseProgress}
       />
 
-      {/* Achievement badge */}
       {isCenturyJumper && (
         <div className="bg-sky-surface border border-sky-border rounded-xl px-4 py-3 flex items-center gap-3">
           <Trophy size={20} className="text-sky-accent" aria-hidden="true" />
