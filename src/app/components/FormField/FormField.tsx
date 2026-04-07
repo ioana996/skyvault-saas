@@ -1,8 +1,6 @@
-export interface FormFieldProps {
-  type: string;
-  name: string;
-  label: string;
-  required?: boolean;
+import { FormFieldConfig } from '@/lib/types';
+
+export interface FormFieldProps extends FormFieldConfig {
   className?: string;
   value: string;
   onChange: (

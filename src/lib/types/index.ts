@@ -9,3 +9,10 @@ export const defaultFormValues: FormValues = {
   date: '',
   notes: '',
 };
+
+export type FormFieldConfig = {
+  type: string;
+  name: string;
+  label: string;
+  required?: boolean;
+};
