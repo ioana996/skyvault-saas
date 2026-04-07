@@ -1,6 +1,6 @@
 import { FormFieldProps } from "../components/FormField/FormField";
 
-export const formFields: Omit<FormFieldProps, "className">[] = [
+export const formFields: Omit<FormFieldProps, "className" | "value" | "onChange">[] = [
   {
     type: "text",
     name: "dropzone",
