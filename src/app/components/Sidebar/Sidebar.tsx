@@ -29,27 +29,20 @@ const Sidebar = () => {
       </div>
 
       <nav aria-label="Sidebar" className="flex-1 space-y-1">
-        {navItems.map(({ label, icon: Icon, active }) =>
-          active ? (
-            <div
-              key={label}
-              aria-current="page"
-              className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sky-primary bg-sky-primary/10 font-medium"
-            >
-              <Icon size={18} aria-hidden="true" />
-              <span>{label}</span>
-            </div>
-          ) : (
-            <div
-              key={label}
-              className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sky-text-subtle cursor-default select-none"
-              aria-disabled="true"
-            >
-              <Icon size={18} aria-hidden="true" />
-              <span>{label}</span>
-            </div>
-          )
-        )}
+        {navItems.map(({ label, icon: Icon, active }) => (
+          <div
+            key={label}
+            className={`flex items-center gap-3 px-3 py-2.5 rounded-lg ${
+              active
+                ? 'text-sky-primary bg-sky-primary/10 font-medium'
+                : 'text-sky-text-subtle cursor-default select-none'
+            }`}
+            {...(active ? { 'aria-current': 'page' as const } : { 'aria-disabled': 'true' })}
+          >
+            <Icon size={18} aria-hidden="true" />
+            <span>{label}</span>
+          </div>
+        ))}
       </nav>
 
       <div className="mt-auto space-y-4 pt-4 border-t border-sky-border">
