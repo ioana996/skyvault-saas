@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { defaultFormValues, FormValues } from "../types";
+import { defaultFormValues, FormValues } from "@/lib/types";
 import JumpLoggingForm from "../JumpLoggingForm/JumpLoggingForm";
 
 const CreateJumpLoggingForm = () => {

@@ -1,6 +1,6 @@
 import { formFields } from "@/app/data/form-fields";
 import FormField from "../FormField/FormField";
-import { FormValues } from "../types";
+import { FormValues } from "@/lib/types";
 
 interface JumpLoggingFormProps {
   values: FormValues;
