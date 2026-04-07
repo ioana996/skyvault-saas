@@ -1,3 +1,4 @@
+import { Trophy } from 'lucide-react';
 import StatCard from './StatCard';
 import ProgressStatCard from './ProgressStatCard';
 
@@ -51,12 +52,10 @@ const HeroStats = () => {
         progress={licenseProgress}
       />
 
-      {/* Achievement badge — emoji is temporary, replaced with Lucide icon in Task 13 */}
+      {/* Achievement badge */}
       {isCenturyJumper && (
         <div className="bg-sky-surface border border-sky-border rounded-xl px-4 py-3 flex items-center gap-3">
-          <span className="text-sky-accent text-xl" aria-hidden="true">
-            🏆
-          </span>
+          <Trophy size={20} className="text-sky-accent" aria-hidden="true" />
           <div>
             <div className="text-sky-text font-semibold text-sm">
               Century Jumper
