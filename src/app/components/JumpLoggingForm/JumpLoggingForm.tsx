@@ -1,5 +1,6 @@
 import { formFields } from '@/app/data/form-fields';
 import FormField from '../FormField/FormField';
+import Button from '../Button/Button';
 import { FormValues } from '@/lib/types';
 
 interface JumpLoggingFormProps {
@@ -25,12 +26,7 @@ const JumpLoggingForm = ({
           onChange={onChange}
         />
       ))}
-      <button
-        type="submit"
-        className="w-full mt-2 min-h-[44px] rounded-lg bg-sky-primary text-white font-semibold text-[15px] hover:bg-blue-600 active:bg-blue-700 transition-colors"
-      >
-        Log Jump
-      </button>
+      <Button type="submit" className="mt-2">Log Jump</Button>
     </form>
   );
 };
