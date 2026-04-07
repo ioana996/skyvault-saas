@@ -2,12 +2,13 @@
 
 import { useState } from 'react';
 import { Sun, Moon } from 'lucide-react';
+import { THEME_STORAGE_KEY, THEME_LIGHT_VALUE, THEME_DARK_VALUE } from '@/lib/theme';
 
 function getInitialIsDark(): boolean {
   if (typeof window === 'undefined') return true;
-  const stored = localStorage.getItem('skyvault-theme');
-  if (stored === 'light') {
-    document.documentElement.setAttribute('data-theme', 'light');
+  const stored = localStorage.getItem(THEME_STORAGE_KEY);
+  if (stored === THEME_LIGHT_VALUE) {
+    document.documentElement.setAttribute('data-theme', THEME_LIGHT_VALUE);
     return false;
   }
   // Default to dark (no data-theme attr) — matches app default
@@ -23,10 +24,10 @@ const ThemeToggle = () => {
     setIsDark(next);
     if (next) {
       document.documentElement.removeAttribute('data-theme');
-      localStorage.setItem('skyvault-theme', 'dark');
+      localStorage.setItem(THEME_STORAGE_KEY, THEME_DARK_VALUE);
     } else {
-      document.documentElement.setAttribute('data-theme', 'light');
-      localStorage.setItem('skyvault-theme', 'light');
+      document.documentElement.setAttribute('data-theme', THEME_LIGHT_VALUE);
+      localStorage.setItem(THEME_STORAGE_KEY, THEME_LIGHT_VALUE);
     }
   };
 
