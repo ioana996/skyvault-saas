@@ -7,6 +7,7 @@ import BottomNav from './components/BottomNav/BottomNav';
 import Drawer from './components/Drawer/Drawer';
 import Sidebar from './components/Sidebar/Sidebar';
 import ThemeToggle from './components/ThemeToggle/ThemeToggle';
+import Card from './components/Card/Card';
 import { Trophy } from 'lucide-react';
 
 export default function Home() {
@@ -28,24 +29,26 @@ export default function Home() {
 
             {/* TODO: Replace with jump history */}
             <section
-              className="hidden lg:block mt-6 bg-sky-surface border border-sky-border rounded-xl p-6"
+              className="hidden lg:block mt-6"
               aria-label="Recent jumps"
             >
-              <h2 className="text-sky-text font-semibold mb-4">Recent Jumps</h2>
-              <p className="text-sky-text-subtle text-sm">
-                Jump history coming soon.
-              </p>
+              <Card className="p-6">
+                <h2 className="text-sky-text font-semibold mb-4">Recent Jumps</h2>
+                <p className="text-sky-text-subtle text-sm">
+                  Jump history coming soon.
+                </p>
+              </Card>
             </section>
           </div>
 
           <aside className="hidden lg:block w-[360px] shrink-0">
-            <div className="bg-sky-surface border border-sky-border rounded-xl p-6 sticky top-8">
+            <Card className="p-6 sticky top-8">
               <h2 className="text-sky-text font-semibold mb-4 flex items-center gap-2">
                 <Trophy size={18} className="text-sky-accent" aria-hidden="true" />
                 Log Jump
               </h2>
               <CreateJumpLoggingForm />
-            </div>
+            </Card>
           </aside>
         </main>
       </div>

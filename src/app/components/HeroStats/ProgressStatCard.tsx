@@ -1,3 +1,5 @@
+import Card from '../Card/Card';
+
 interface ProgressStatCardProps {
   title: string;
   label: string;
@@ -14,7 +16,7 @@ const ProgressStatCard = ({
   progress,
 }: ProgressStatCardProps) => {
   return (
-    <div className="bg-sky-surface border border-sky-border p-6 rounded-xl min-w-[180px]">
+    <Card className="p-6 min-w-[180px]">
       <div className="text-3xl font-bold text-sky-primary">{title}</div>
       <div className="text-sm text-sky-text-muted mt-1">{label}</div>
       <div
@@ -33,7 +35,7 @@ const ProgressStatCard = ({
       <div className="text-xs text-sky-text-subtle mt-1">
         {current} / {required} jumps ({progress}%)
       </div>
-    </div>
+    </Card>
   );
 };
 

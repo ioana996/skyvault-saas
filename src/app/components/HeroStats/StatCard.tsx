@@ -1,3 +1,5 @@
+import Card from '../Card/Card';
+
 interface StatCardProps {
   value: string | number;
   label: string;
@@ -5,10 +7,10 @@ interface StatCardProps {
 
 const StatCard = ({ value, label }: StatCardProps) => {
   return (
-    <div className="bg-sky-surface border border-sky-border p-6 rounded-xl">
+    <Card className="p-6">
       <div className="text-3xl font-bold text-sky-primary">{value}</div>
       <div className="text-sm text-sky-text-muted mt-1">{label}</div>
-    </div>
+    </Card>
   );
 };
 

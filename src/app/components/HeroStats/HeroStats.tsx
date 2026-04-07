@@ -1,6 +1,7 @@
 import { Trophy } from 'lucide-react';
 import StatCard from './StatCard';
 import ProgressStatCard from './ProgressStatCard';
+import Card from '../Card/Card';
 
 const HeroStats = () => {
   const totalJumps = 127;
@@ -50,7 +51,7 @@ const HeroStats = () => {
       />
 
       {isCenturyJumper && (
-        <div className="bg-sky-surface border border-sky-border rounded-xl px-4 py-3 flex items-center gap-3">
+        <Card className="px-4 py-3 flex items-center gap-3">
           <Trophy size={20} className="text-sky-accent" aria-hidden="true" />
           <div>
             <div className="text-sky-text font-semibold text-sm">
@@ -58,7 +59,7 @@ const HeroStats = () => {
             </div>
             <div className="text-sky-text-subtle text-xs">100+ jumps</div>
           </div>
-        </div>
+        </Card>
       )}
     </section>
   );
