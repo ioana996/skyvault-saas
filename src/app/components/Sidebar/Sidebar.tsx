@@ -9,6 +9,7 @@ import {
   User,
 } from 'lucide-react';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
+import { mockStats } from '@/app/data/stats';
 
 const navItems = [
   { label: 'Dashboard', icon: Home, active: true },
@@ -56,7 +57,7 @@ const Sidebar = () => {
           </div>
           <div>
             <div className="text-sm font-medium text-sky-text">Jumper</div>
-            <div className="text-xs text-sky-text-subtle">127 jumps</div>
+            <div className="text-xs text-sky-text-subtle">{mockStats.totalJumps} jumps</div>
           </div>
         </div>
       </div>

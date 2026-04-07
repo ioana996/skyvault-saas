@@ -2,13 +2,10 @@ import { Trophy } from 'lucide-react';
 import StatCard from './StatCard';
 import ProgressStatCard from './ProgressStatCard';
 import Card from '../Card/Card';
+import { mockStats } from '@/app/data/stats';
 
 const HeroStats = () => {
-  const totalJumps = 127;
-  const totalFreefallTime = { hours: 1, minutes: 42, seconds: 15 };
-  const daysSinceLastJump = 12;
-
-  const nextLicense = { name: 'C-License', current: 127, required: 200 };
+  const { totalJumps, totalFreefallTime, daysSinceLastJump, nextLicense } = mockStats;
   const licenseProgress = Math.min(
     Math.round((nextLicense.current / nextLicense.required) * 100),
     100
