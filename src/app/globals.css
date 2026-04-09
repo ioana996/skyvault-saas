@@ -2,53 +2,59 @@
 
 /* Dark theme: active when no data-theme attribute is set */
 :root {
-  --sky-bg:           #0F172A;
-  --sky-surface:      #1E293B;
-  --sky-surface-mid:  #334155;
-  --sky-surface-high: #475569;
-  --sky-text:         #F8FAFC;
-  --sky-text-muted:   #94A3B8;
-  --sky-text-subtle:  #64748B;
-  --sky-primary:      #3B82F6;
-  --sky-accent:       #F97316;
-  --sky-success:      #10B981;
-  --sky-border:       rgba(255, 255, 255, 0.05);
+  --sky-bg:              #060b18;
+  --sky-surface:         #0b1324;
+  --sky-surface-mid:     rgba(255, 255, 255, 0.04);
+  --sky-surface-high:    rgba(255, 255, 255, 0.07);
+  --sky-text:            #f1f5f9;
+  --sky-text-muted:      #94a3b8;
+  --sky-text-subtle:     #475569;
+  --sky-primary:         #0ea5e9;
+  --sky-primary-bright:  #38bdf8;
+  --sky-accent:          #f97316;
+  --sky-success:         #10b981;
+  --sky-border:          rgba(56, 189, 248, 0.08);
+  --sky-border-active:   rgba(56, 189, 248, 0.18);
 }
 
 [data-theme="light"] {
-  --sky-bg:           #F1F5F9;
-  --sky-surface:      #FFFFFF;
-  --sky-surface-mid:  #E2E8F0;
-  --sky-surface-high: #CBD5E1;
-  --sky-text:         #0F172A;
-  --sky-text-muted:   #475569;
-  --sky-text-subtle:  #94A3B8;
-  --sky-primary:      #3B82F6;
-  --sky-accent:       #F97316;
-  --sky-success:      #10B981;
-  --sky-border:       rgba(0, 0, 0, 0.08);
+  --sky-bg:              #eef4fc;
+  --sky-surface:         #f8fbff;
+  --sky-surface-mid:     rgba(255, 255, 255, 0.7);
+  --sky-surface-high:    rgba(14, 165, 233, 0.06);
+  --sky-text:            #0f172a;
+  --sky-text-muted:      #475569;
+  --sky-text-subtle:     #94a3b8;
+  --sky-primary:         #0284c7;
+  --sky-primary-bright:  #38bdf8;
+  --sky-accent:          #f97316;
+  --sky-success:         #10b981;
+  --sky-border:          rgba(14, 165, 233, 0.12);
+  --sky-border-active:   rgba(14, 165, 233, 0.2);
 }
 
 @theme inline {
-  --color-sky-bg:           var(--sky-bg);
-  --color-sky-surface:      var(--sky-surface);
-  --color-sky-surface-mid:  var(--sky-surface-mid);
-  --color-sky-surface-high: var(--sky-surface-high);
-  --color-sky-text:         var(--sky-text);
-  --color-sky-text-muted:   var(--sky-text-muted);
-  --color-sky-text-subtle:  var(--sky-text-subtle);
-  --color-sky-primary:      var(--sky-primary);
-  --color-sky-accent:       var(--sky-accent);
-  --color-sky-success:      var(--sky-success);
-  --color-sky-border:       var(--sky-border);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-sky-bg:              var(--sky-bg);
+  --color-sky-surface:         var(--sky-surface);
+  --color-sky-surface-mid:     var(--sky-surface-mid);
+  --color-sky-surface-high:    var(--sky-surface-high);
+  --color-sky-text:            var(--sky-text);
+  --color-sky-text-muted:      var(--sky-text-muted);
+  --color-sky-text-subtle:     var(--sky-text-subtle);
+  --color-sky-primary:         var(--sky-primary);
+  --color-sky-primary-bright:  var(--sky-primary-bright);
+  --color-sky-accent:          var(--sky-accent);
+  --color-sky-success:         var(--sky-success);
+  --color-sky-border:          var(--sky-border);
+  --color-sky-border-active:   var(--sky-border-active);
+  --font-display: var(--font-chakra-petch);
+  --font-sans:    var(--font-barlow);
 }
 
 body {
   background-color: var(--sky-bg);
   color: var(--sky-text);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-family: var(--font-barlow), system-ui, sans-serif;
 }
 
 @media (prefers-reduced-motion: reduce) {

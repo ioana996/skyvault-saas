@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Chakra_Petch, Barlow } from "next/font/google";
 import "./globals.css";
 import { THEME_STORAGE_KEY, THEME_LIGHT_VALUE, THEME_DARK_VALUE } from '@/lib/theme';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const chakraPetch = Chakra_Petch({
+  variable: "--font-chakra-petch",
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const barlow = Barlow({
+  variable: "--font-barlow",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -18,7 +20,6 @@ export const metadata: Metadata = {
   description: "Your personal skydiving logbook",
 };
 
-// Prevents flash of wrong theme on page load
 const themeScript = `
 (function() {
   try {
@@ -42,9 +43,7 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${chakraPetch.variable} ${barlow.variable} antialiased`}>
         {children}
       </body>
     </html>
