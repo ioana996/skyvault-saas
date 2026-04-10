@@ -8,10 +8,10 @@ describe('Card', () => {
     expect(screen.getByText('Hello World')).toBeInTheDocument();
   });
 
-  it('applies bg-sky-surface class', () => {
+  it('applies bg-sky-surface-mid class', () => {
     const { container } = render(<Card>content</Card>);
     const card = container.firstChild as HTMLElement;
-    expect(card.className).toContain('bg-sky-surface');
+    expect(card.className).toContain('bg-sky-surface-mid');
   });
 
   it('applies border-sky-border class', () => {
