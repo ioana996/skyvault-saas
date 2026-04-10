@@ -9,7 +9,7 @@ export interface FormFieldProps extends FormFieldConfig {
 }
 
 const baseInputClasses =
-  'w-full rounded-lg px-3 bg-sky-surface border border-sky-surface-mid text-sky-text placeholder:text-sky-text-subtle focus:outline-none focus:ring-2 focus:ring-sky-primary min-h-[44px] text-[15px]';
+  'w-full rounded-lg px-3 bg-sky-surface border border-sky-border text-sky-text placeholder:text-sky-text-subtle focus:outline-none focus:border-sky-primary/40 focus:ring-1 focus:ring-sky-primary/20 min-h-[44px] text-[14px] transition-colors';
 
 const FormField = ({
   type,
@@ -23,10 +23,10 @@ const FormField = ({
   const inputClasses = `${baseInputClasses} ${className}`.trim();
 
   return (
-    <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-1.5">
       <label
         htmlFor={name}
-        className="text-sm font-medium text-sky-text-muted"
+        className="text-[10px] font-medium text-sky-text-subtle uppercase tracking-[0.12em]"
       >
         {label}
       </label>

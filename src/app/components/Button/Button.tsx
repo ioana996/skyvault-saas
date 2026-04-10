@@ -17,13 +17,13 @@ const Button = ({
 }: ButtonProps) => {
   const variantClasses =
     variant === 'primary'
-      ? 'bg-sky-primary text-white hover:bg-blue-600 active:bg-blue-700'
+      ? 'bg-gradient-to-r from-sky-primary to-sky-primary-bright text-white hover:opacity-90 active:opacity-80'
       : '';
 
   return (
     <button
       type={type}
-      className={`w-full min-h-[44px] rounded-lg font-semibold text-[15px] transition-colors ${variantClasses} ${className}`.trim()}
+      className={`w-full min-h-[44px] rounded-lg font-semibold text-[13px] uppercase tracking-[0.08em] transition-opacity ${variantClasses} ${className}`.trim()}
       onClick={onClick}
       disabled={disabled}
     >
