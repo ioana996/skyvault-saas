@@ -1,6 +1,6 @@
 'use client';
 
-import { Home, Book, BarChart2, User, PlusCircle } from 'lucide-react';
+import { Home, Book, BarChart2, User, Plus } from 'lucide-react';
 
 interface BottomNavProps {
   onFabClick: () => void;
@@ -18,7 +18,7 @@ const BottomNav = ({ onFabClick }: BottomNavProps) => {
           aria-current="page"
         >
           <Home size={20} aria-hidden="true" />
-          <span className="text-[10px] font-medium">Home</span>
+          <span className="text-[10px] font-medium tracking-wide">Home</span>
         </button>
 
         <button
@@ -27,15 +27,15 @@ const BottomNav = ({ onFabClick }: BottomNavProps) => {
           aria-disabled="true"
         >
           <Book size={20} aria-hidden="true" />
-          <span className="text-[10px]">Logbook</span>
+          <span className="text-[10px] tracking-wide">Logbook</span>
         </button>
 
         <button
           onClick={onFabClick}
           aria-label="Log Jump"
-          className="flex flex-col items-center justify-center w-14 h-14 rounded-full bg-sky-primary text-white shadow-lg -mt-5 min-w-[44px]"
+          className="flex flex-col items-center justify-center w-14 h-14 rounded-full bg-sky-primary text-white shadow-lg -mt-5 min-w-[44px] ring-4 ring-sky-primary/20"
         >
-          <PlusCircle size={24} aria-hidden="true" />
+          <Plus size={22} aria-hidden="true" />
         </button>
 
         <button
@@ -44,7 +44,7 @@ const BottomNav = ({ onFabClick }: BottomNavProps) => {
           aria-disabled="true"
         >
           <BarChart2 size={20} aria-hidden="true" />
-          <span className="text-[10px]">Stats</span>
+          <span className="text-[10px] tracking-wide">Stats</span>
         </button>
 
         <button
@@ -53,7 +53,7 @@ const BottomNav = ({ onFabClick }: BottomNavProps) => {
           aria-disabled="true"
         >
           <User size={20} aria-hidden="true" />
-          <span className="text-[10px]">Profile</span>
+          <span className="text-[10px] tracking-wide">Profile</span>
         </button>
       </div>
     </nav>
