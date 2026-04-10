@@ -46,9 +46,9 @@ const ThemeToggle = () => {
       onClick={toggle}
       onKeyDown={handleKeyDown}
       className={`
-        relative inline-flex items-center w-14 h-7 rounded-full border border-sky-surface-mid
+        relative inline-flex items-center w-14 h-7 rounded-full border border-sky-border-active
         transition-colors duration-300
-        ${isDark ? 'bg-sky-surface-mid' : 'bg-sky-primary/20'}
+        ${isDark ? 'bg-sky-surface' : 'bg-sky-primary/20'}
         focus:outline-none focus:ring-2 focus:ring-sky-primary
       `}
     >
