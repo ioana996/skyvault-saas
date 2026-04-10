@@ -19,12 +19,18 @@ export default function Home() {
 
       <div className="flex-1 flex flex-col min-h-screen">
         <header className="lg:hidden flex items-center justify-between px-4 py-3 border-b border-sky-border">
-          <span className="text-lg font-bold text-sky-text">SkyVault</span>
+          <span className="text-lg font-display font-bold text-sky-text tracking-wide">SkyVault</span>
           <ThemeToggle />
         </header>
 
-        <main className="flex-1 flex flex-col lg:flex-row gap-6 p-4 lg:p-8 pb-24 lg:pb-8">
-          <div className="flex-1 max-w-2xl mx-auto w-full lg:mx-0">
+        <main className="flex-1 flex flex-col lg:flex-row gap-6 p-4 lg:p-8 pb-24 lg:pb-8 relative overflow-hidden">
+          {/* Atmospheric glow */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -top-10 -right-10 w-80 h-52 rounded-full bg-sky-primary-bright/[0.06] blur-3xl"
+          />
+
+          <div className="flex-1 max-w-2xl mx-auto w-full lg:mx-0 relative z-10">
             <HeroStats />
 
             {/* TODO: Replace with jump history */}
@@ -33,7 +39,7 @@ export default function Home() {
               aria-label="Recent jumps"
             >
               <Card className="p-6">
-                <h2 className="text-sky-text font-semibold mb-4">Recent Jumps</h2>
+                <h2 className="text-sky-text font-display font-bold text-sm mb-3 uppercase tracking-widest">Recent Jumps</h2>
                 <p className="text-sky-text-subtle text-sm">
                   Jump history coming soon.
                 </p>
@@ -41,10 +47,10 @@ export default function Home() {
             </section>
           </div>
 
-          <aside className="hidden lg:block w-[360px] shrink-0">
+          <aside className="hidden lg:block w-[360px] shrink-0 relative z-10">
             <Card className="p-6 sticky top-8">
-              <h2 className="text-sky-text font-semibold mb-4 flex items-center gap-2">
-                <Trophy size={18} className="text-sky-accent" aria-hidden="true" />
+              <h2 className="text-sky-text font-display font-bold text-[13px] mb-4 flex items-center gap-2 uppercase tracking-widest">
+                <Trophy size={15} className="text-sky-accent" aria-hidden="true" />
                 Log Jump
               </h2>
               <CreateJumpLoggingForm />
@@ -56,7 +62,7 @@ export default function Home() {
       <BottomNav onFabClick={() => setDrawerOpen(true)} />
 
       <Drawer isOpen={drawerOpen} onClose={() => setDrawerOpen(false)}>
-        <h2 className="text-sky-text font-semibold mb-4">Log Jump</h2>
+        <h2 className="text-sky-text font-display font-bold text-sm mb-4 uppercase tracking-widest">Log Jump</h2>
         <CreateJumpLoggingForm />
       </Drawer>
     </div>
