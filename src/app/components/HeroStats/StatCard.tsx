@@ -7,9 +7,9 @@ interface StatCardProps {
 
 const StatCard = ({ value, label }: StatCardProps) => {
   return (
-    <Card className="p-6">
-      <div className="text-3xl font-bold text-sky-primary">{value}</div>
-      <div className="text-sm text-sky-text-muted mt-1">{label}</div>
+    <Card className="p-4">
+      <div className="text-2xl font-display font-bold text-sky-text tracking-tight">{value}</div>
+      <div className="text-[10px] font-medium text-sky-text-subtle mt-1 uppercase tracking-widest">{label}</div>
     </Card>
   );
 };
