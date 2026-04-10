@@ -11,7 +11,8 @@ describe('Button', () => {
   it('applies primary variant classes', () => {
     render(<Button variant="primary">Submit</Button>);
     const button = screen.getByRole('button', { name: /submit/i });
-    expect(button.className).toContain('bg-sky-primary');
+    expect(button.className).toContain('bg-gradient-to-r');
+    expect(button.className).toContain('from-sky-primary');
     expect(button.className).toContain('text-white');
   });
 
