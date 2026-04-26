@@ -1,3 +1,5 @@
+import Card from '../Card/Card';
+
 interface ProgressStatCardProps {
   title: string;
   label: string;
@@ -6,21 +8,36 @@ interface ProgressStatCardProps {
   progress: number;
 }
 
-const ProgressStatCard = ({ title, label, current, required, progress }: ProgressStatCardProps) => {
+const ProgressStatCard = ({
+  title,
+  label,
+  current,
+  required,
+  progress,
+}: ProgressStatCardProps) => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm min-w-[180px]">
-      <div className="text-3xl font-bold text-indigo-600">{title}</div>
-      <div className="text-sm text-gray-600 mt-1">{label}</div>
-      <div className="mt-3 w-full bg-gray-100 rounded-full h-2">
+    <Card className="p-4 min-w-[180px]">
+      <div className="flex items-baseline justify-between mb-2">
+        <div className="text-base font-display font-bold text-sky-text tracking-tight">{title}</div>
+        <div className="text-[10px] font-medium text-sky-text-subtle uppercase tracking-widest">{label}</div>
+      </div>
+      <div
+        className="w-full bg-sky-surface-high rounded-full h-[3px]"
+        role="progressbar"
+        aria-valuenow={progress}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-label={`${title} progress: ${progress}%`}
+      >
         <div
-          className="bg-indigo-500 h-2 rounded-full transition-all"
+          className="bg-gradient-to-r from-sky-primary to-sky-primary-bright h-[3px] rounded-full transition-all"
           style={{ width: `${progress}%` }}
         />
       </div>
-      <div className="text-xs text-gray-400 mt-1">
+      <div className="text-[10px] text-sky-text-subtle mt-1.5">
         {current} / {required} jumps ({progress}%)
       </div>
-    </div>
+    </Card>
   );
 };
 

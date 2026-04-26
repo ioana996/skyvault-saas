@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { defaultFormValues, FormValues } from "../types";
+import { defaultFormValues, FormValues } from "@/lib/types";
 import JumpLoggingForm from "../JumpLoggingForm/JumpLoggingForm";
 
 const CreateJumpLoggingForm = () => {
@@ -14,7 +14,7 @@ const CreateJumpLoggingForm = () => {
   };
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Submiting form...");
+    console.log("Submitting form...");
   };
 
   return (

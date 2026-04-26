@@ -1,6 +1,6 @@
-import { FormFieldProps } from "../components/FormField/FormField";
+import { FormFieldConfig } from '@/lib/types';
 
-export const formFields: Omit<FormFieldProps, "className">[] = [
+export const formFields: FormFieldConfig[] = [
   {
     type: "text",
     name: "dropzone",
